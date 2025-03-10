@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>380</width>
+    <height>565</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Calculator</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(94, 92, 100);
+</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLabel" name="output_lable">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>361</width>
+      <height>81</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>24</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(192, 191, 188);
+border-radius: 5px;</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::Panel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Sunken</enum>
+    </property>
+    <property name="lineWidth">
+     <number>2</number>
+    </property>
+    <property name="text">
+     <string>0</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+    </property>
+    <property name="margin">
+     <number>10</number>
+    </property>
+    <property name="indent">
+     <number>-2</number>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="b1">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>130</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <family>Ubuntu</family>
+      <pointsize>20</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+      <strikeout>false</strikeout>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(51, 209, 122);
+
+border-radius: 20px;
+border-width:2px;border-top-color: rgb(38, 162, 105);
+border-left-color: rgb(38, 162, 105);
+border-right-color: rgb(143, 240, 164);
+border-bottom-color: rgb(143, 240, 164);</string>
+    </property>
+    <property name="text">
+     <string>1</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="b2">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>80</x>
+      <y>130</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(51, 209, 122);
+
+border-radius: 20px;
+border-width:2px;border-top-color: rgb(38, 162, 105);
+border-left-color: rgb(38, 162, 105);
+border-right-color: rgb(143, 240, 164);
+border-bottom-color: rgb(143, 240, 164);</string>
+    </property>
+    <property name="text">
+     <string>2</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="b4">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>130</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(51, 209, 122);
+
+border-radius: 20px;
+border-width:2px;border-top-color: rgb(38, 162, 105);
+border-left-color: rgb(38, 162, 105);
+border-right-color: rgb(143, 240, 164);
+border-bottom-color: rgb(143, 240, 164);</string>
+    </property>
+    <property name="text">
+     <string>4</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="b3">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
+    <property name="geometry">
+     <rect>
+      <x>150</x>
+      <y>130</y>
+      <width>60</width>
+      <height>60</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>20</pointsize>
+      <weight>50</weight>
+      <bold>false</bold>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: rgb(51, 209, 122);
+
+border-radius: 20px;
+border-width:2px;border-top-color: rgb(38, 162, 105);
+border-left-color: rgb(38, 162, 105);
+border-right-color: rgb(143, 240, 164);
+border-bottom-color: rgb(143, 240, 164);</string>
+    </property>
+    <property name="text">
+     <string>3</string>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>380</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuFile">
+    <property name="title">
+     <string>File</string>
+    </property>
+    <addaction name="actionExit"/>
+   </widget>
+   <addaction name="menuFile"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
