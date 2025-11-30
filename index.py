@@ -13,45 +13,44 @@ FORM_CLASS,_ = loadUiType(path.join(path.dirname(__file__),"main.ui"))
 
 
 class mainapp(QMainWindow ,FORM_CLASS):
-    def __init__(self,parent = None):
-        super(mainapp,self).__init__(parent)
-        QMainWindow.__init__(self)
+    def __init__(self, parent = None):
+        super().__init__(parent)
         self.setupUi(self)
-        self.Handle_numbers()
+        self.expression  = ""
+        self.Handle_buttons()
         self.handle_exit()
 
-    def Handle_numbers(self):
-        self.b1.clicked.connect(lambda:self.display_num('1'))
-        self.b2.clicked.connect(lambda:self.display_num('2'))
-        self.b3.clicked.connect(lambda:self.display_num('3'))
-        self.b4.clicked.connect(lambda:self.display_num('4'))
-        self.b5.clicked.connect(lambda:self.display_num('5'))
-        self.b6.clicked.connect(lambda:self.display_num('6'))
-        self.b7.clicked.connect(lambda:self.display_num('7'))
-        self.b8.clicked.connect(lambda:self.display_num('8'))
-        self.b9.clicked.connect(lambda:self.display_num('9'))
-        self.b0.clicked.connect(lambda:self.display_num('0'))
-        self.bc.clicked.connect(lambda:self.display_num('C'))
-        self.b_divide.clicked.connect(lambda:self.display_num('/'))
-        self.b_plus.clicked.connect(lambda:self.display_num('+'))
-        self.b_times.clicked.connect(lambda:self.display_num('*'))
-        self.b_minus.clicked.connect(lambda:self.display_num('-'))
+    def Handle_buttons(self):
+        buttons_list = [self.b0, self.b1, self.b2, self.b3, self.b4,
+                        self.b5, self.b6, self.b7, self.b8, self.b9]
+        for btn in buttons_list:
+            btn.clicked.connect(self.add_num)
+
+        self.bc.clicked.connect(self.clear_display)
+        self.b_divide.clicked.connect(lambda:self.add_operator('/'))
+        self.b_plus.clicked.connect(lambda:self.add_operator('+'))
+        self.b_times.clicked.connect(lambda:self.add_operator('*'))
+        self.b_minus.clicked.connect(lambda:self.add_operator('-'))
         self.b_equal.clicked.connect(lambda:self.calculate())
 
-    def display_num(self, num):
-        if num == 'C':
-            self.output_lable.setText('')
-        else:
-            if (self.output_lable.text() == '' and num == '0'):
-                self.output_lable.setText('')
-            else:
-                num = self.output_lable.text()+num
-                self.output_lable.setText(num)
+    def add_num(self):
+        btn = self.sender()
+        self.expression += btn.text()
+        self.output_lable.setText(self.expression)
+
+    def add_operator(self, op):
+        self.expression += op
+        self.output_lable.setText(self.expression)
+
+    def clear_display(self):
+        self.expression = ""
+        self.output_lable.clear()
 
     def calculate(self):
         try:
-            expression = self.output_lable.text()
-            result = eval(expression)
+            self.expression = self.output_lable.text()
+            result = eval(self.expression)
+            self.expression = str(result)
             self.output_lable.setText(str(result))
         except Exception as e:
             self.output_lable.setText("Error")

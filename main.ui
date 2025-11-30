@@ -10,6 +10,18 @@
     <height>545</height>
    </rect>
   </property>
+  <property name="minimumSize">
+   <size>
+    <width>380</width>
+    <height>545</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>380</width>
+    <height>545</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>Calculator</string>
   </property>
@@ -35,7 +47,9 @@
     </property>
     <property name="styleSheet">
      <string notr="true">background-color: rgb(192, 191, 188);
-border-radius: 5px;</string>
+border-radius: 5px;
+padding: 10px;
+</string>
     </property>
     <property name="frameShape">
      <enum>QFrame::Panel</enum>
@@ -50,7 +64,7 @@ border-radius: 5px;</string>
      <string/>
     </property>
     <property name="alignment">
-     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
     </property>
     <property name="margin">
      <number>15</number>
